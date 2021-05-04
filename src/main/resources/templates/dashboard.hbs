@@ -1,3 +1,7 @@
+{{#partial "script"}}
+    <script src="/js/script.js"></script>
+{{/partial}}
+
 {{#partial "styles"}}
 
     <link rel='stylesheet' href='/css/dashboard.css'>
@@ -6,21 +10,61 @@
 
 {{#partial "content"}}
 
-    <div id="heading">
-       <h1>WELCOME</h1>
-    </div>
-
-    <!-- Some images will show error in console due not having 'https' in the url,  nothing to worry about -->
     <input type="checkbox" id="cartToggle" name="toggle" />
 
-    <!-- Menu -->
-    <nav class="navbar">
-        <h2 id="logo">Custom Recipe Orders</h2>
-        <div>
-            <label for="cartToggle" class="toggleCart btnStyle btnStyle2"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <span class="num"></span>
-            </label>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-toggleable-sm navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            ☰
+        </button>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Men
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">Coats</a>
+                        <a class="dropdown-item" href="">Bottoms</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Women
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">Tops</a>
+                        <a class="dropdown-item" href="">Bottoms</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Children
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">Tops</a>
+                        <a class="dropdown-item" href="">Bottoms</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <label for="cartToggle" class="toggleCart btnStyle btnStyle2"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        <span class="num"></span>
+                    </label>
+                </li>
+
+            </ul>
         </div>
     </nav><!-- End of Navigation -->
 
@@ -28,10 +72,10 @@
 
         <!-- Cart -->
         <nav class="cart">
-            <h3>List of orders: <span>0$</span></h3>
+            <h3>List of orders: Ksh<span>0</span></h3>
             <ol id="listOfOrders">
             </ol>
-            <a class="btnStyle btnStyle3 finishOrder">Finish Order</a>
+            <a class="btnStyle btnStyle3 finishOrder">Checkout</a>
         </nav>
 
         <div class="recipe-menu">

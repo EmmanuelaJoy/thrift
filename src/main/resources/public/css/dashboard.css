@@ -21,27 +21,36 @@
 
 
 /* Style CSS */
-*{
-    margin: 0px;
-    padding: 0px;
-}
 
 input{
     outline-color: #C98474;
 }
 
 .navbar {
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    background-color: #A7D2CB;
-    border-radius: 0px;
-    padding: 0px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+    margin: 0;
+    background-color: #b54a36;
+}
+
+.navbar-brand{
+    text-shadow: 0.1rem 0.1rem 0.5rem #333;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: lavender;
+}
+
+.navbar-brand:hover{
+    color: gold;
+}
+
+#navRight{
+    margin-left: 7em;
+}
+
+.navbar-nav a{
+    font-size: 1.4rem;
+    color: white;
+    margin-right: 60px;
 }
 
 .btnStyle{
@@ -102,7 +111,7 @@ input{
 }
 
 .cart{
-    width: 200px;
+    width: 300px;
     position: fixed;
     top: 60px;
     bottom: 0px;

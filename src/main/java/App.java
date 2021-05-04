@@ -10,9 +10,13 @@ public class App {
         staticFileLocation("/public");
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "dashboard.hbs");
+            return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/dashboard", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "dashboard.hbs");
+        }, new HandlebarsTemplateEngine());
 
     }
 }
